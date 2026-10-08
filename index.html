@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشفيات الشفاء التخصصي | Al-Shifa Medical Complex</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- الهيدر العلوي والروابط -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container top-flex">
+                <span><i class="fa-solid fa-phone"></i> الطوارئ 24/7: 12345</span>
+                <span><i class="fa-solid fa-location-dot"></i> شارع الصحة الرئيسي، القاهرة</span>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container header-flex">
+                <div class="logo">
+                    <i class="fa-solid fa-hospital"></i> الشفاء التخصصي
+                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#departments">الأقسام الطبية</a></li>
+                        <li><a href="#doctors">نخبة الأطباء</a></li>
+                        <li><a href="#booking">حجز ودفع الكشف</a></li>
+                        <li><a href="#followup">متابعة الحالة</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+                <a href="#booking" class="btn btn-primary">احجز كشفك الآن</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم الرئيسية (Hero) -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="sub-heading">رحلة علاجية متكاملة بأحدث التقنيات</span>
+            <h1>صحتك ورعايتك هي مهمتنا الأولى</h1>
+            <p>نضم أكبر صرح طبي يضم نخبة من الاستشاريين وأحدث أجهزة التشخيص والعلاج مع إمكانية المتابعة والدفع الإلكتروني.</p>
+            <div class="hero-btns">
+                <a href="#booking" class="btn btn-primary">احجز ودفع موعد كشف</a>
+                <a href="#followup" class="btn btn-outline">متابعة حالتك الطبية</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم البحث السريع -->
+    <section class="search-bar-section">
+        <div class="container">
+            <div class="search-box-container">
+                <input type="text" id="searchInput" placeholder="ابحث باسم الطبيب أو التخصص (مثال: قلب، عظام، أطفال)...">
+                <button class="btn btn-primary" onclick="searchFilter()">بحث سريع</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- الأقسام الطبية -->
+    <section id="departments" class="departments-section">
+        <div class="container">
+            <h2 class="section-title">أقسام المستشفى التخصصية</h2>
+            <div class="title-line"></div>
+            <div class="dept-grid">
+                <div class="dept-card">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>قسم أمراض القلب</h3>
+                    <p>قسطرة القلب، رسم القلب، ووحدة العناية المركزة القلبية.</p>
+                </div>
+                <div class="dept-card">
+                    <i class="fa-solid fa-bone"></i>
+                    <h3>قسم العظام والمفاصل</h3>
+                    <p>علاج الكسور، جراحات المنظار، وتغيير المفاصل الصناعية.</p>
+                </div>
+                <div class="dept-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>قسم المخ والأعصاب</h3>
+                    <p>تشخيص الجلطات، علاج الصداع المزمن، وتخطيط الدماغ.</p>
+                </div>
+                <div class="dept-card">
+                    <i class="fa-solid fa-child"></i>
+                    <h3>قسم الأطفال و حديثي الولادة</h3>
+                    <p>متابعة النمو، تطعيمات، وحضانات متطورة للأطفال المبتسرين.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نخبة الأطباء -->
+    <section id="doctors" class="doctors-section">
+        <div class="container">
+            <h2 class="section-title">تعرف على نخبة أطبائنا</h2>
+            <div class="title-line"></div>
+            <div class="doctors-grid" id="doctorsGrid">
+                <div class="doc-card" data-specialty="قلب">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80" alt="دكتور أحمد الخالد">
+                    <div class="doc-info">
+                        <h3>د. أحمد الخالد</h3>
+                        <span class="spec">استشاري أمراض القلب والشرايين</span>
+                        <p>دكتوراه القلب والأوعية الدموية من جامعة لندن.</p>
+                        <a href="#booking" class="btn btn-outline" style="color: #0077b6; border-color: #0077b6; width: 100%; text-align: center; display: block; margin-top: 10px;">حجز ودفع الكشف</a>
+                    </div>
+                </div>
+                <div class="doc-card" data-specialty="عظام">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80" alt="دكتور محمد عبد الله">
+                    <div class="doc-info">
+                        <h3>د. محمد عبد الله</h3>
+                        <span class="spec">استشاري جراحة العظام والمفاصل</span>
+                        <p>متخصص في جراحات المناظير وإصلاح الإصابات الرياضية.</p>
+                        <a href="#booking" class="btn btn-outline" style="color: #0077b6; border-color: #0077b6; width: 100%; text-align: center; display: block; margin-top: 10px;">حجز ودفع الكشف</a>
+                    </div>
+                </div>
+                <div class="doc-card" data-specialty="أطفال">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="دكتورة سارة محمود">
+                    <div class="doc-info">
+                        <h3>د. سارة محمود</h3>
+                        <span class="spec">أخصائي طب الأطفال وحديثي الولادة</span>
+                        <p>متابعة نمو الأطفال وعلاج أمراض الصدر والحساسية.</p>
+                        <a href="#booking" class="btn btn-outline" style="color: #0077b6; border-color: #0077b6; width: 100%; text-align: center; display: block; margin-top: 10px;">حجز ودفع الكشف</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نظام حجز موعد الكشف مع بوابات الدفع -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2 class="section-title">حجز موعد كشف مع الدفع الإلكتروني</h2>
+            <div class="title-line"></div>
+            <p class="section-desc">أدخل بيانات الحجز واختر طريقة دفع رسوم الكشف لتأكيد الموعد فوراً</p>
+
+            <form id="booking-form" class="booking-form-grid">
+                <div class="input-group">
+                    <input type="text" id="patientName" placeholder="اسم المريض الرباعي" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="patientPhone" placeholder="رقم الهاتف المحمول (لتلقي تفاصيل المتابعة)" required>
+                </div>
+                <div class="input-group">
+                    <select id="select-dept" required>
+                        <option value="">اختر القسم الطبي</option>
+                        <option value="قلب">قسم أمراض القلب</option>
+                        <option value="عظام">قسم العظام والمفاصل</option>
+                        <option value="أعصاب">قسم المخ والأعصاب</option>
+                        <option value="أطفال">قسم الأطفال</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <select id="select-doc" required>
+                        <option value="">اختر الطبيب المعالج</option>
+                        <option value="د. أحمد الخالد">د. أحمد الخالد (قلب)</option>
+                        <option value="د. محمد عبد الله">د. محمد عبد الله (عظام)</option>
+                        <option value="د. سارة محمود">د. سارة محمود (أطفال)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="date" id="bookingDate" required>
+                </div>
+                <div class="input-group">
+                    <input type="time" id="bookingTime" required>
+                </div>
+                
+                <!-- خيارات الدفع الإلكتروني وتحويل الفلوس -->
+                <div class="input-group payment-box-wrapper" style="grid-column: 1 / -1;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 10px; color: var(--primary-dark);">اختر طريقة دفع رسوم الكشف (تحويل آمن):</label>
+                    <div class="payment-options-grid">
+                        <label class="pay-option">
+                            <input type="radio" name="paymentMethod" value="بطاقة ائتمان (Visa/Mastercard)" checked> 
+                            <i class="fa-solid fa-credit-card"></i> بطاقة ائتمان (فيزا / ماستركارد)
+                        </label>
+                        <label class="pay-option">
+                            <input type="radio" name="paymentMethod" value="تحويل محفظة إلكترونية (فودافون كاش/إنستاباي)"> 
+                            <i class="fa-solid fa-wallet"></i> محفظة إلكترونية (فودافون كاش / إنستاباي)
+                        </label>
+                        <label class="pay-option">
+                            <input type="radio" name="paymentMethod" value="الدفع النقدي بالعيادة"> 
+                            <i class="fa-solid fa-money-bill-wave"></i> الدفع النقدي عند الاستقبال
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="grid-column: 1 / -1; padding: 15px; font-size: 18px;">تأكيد الدفع وحجز الموعد الطبي</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- قسم متابعة الحالة الطبية بعد الكشف -->
+    <section id="followup" class="followup-section">
+        <div class="container">
+            <h2 class="section-title">متابعة الحالة الطبية وسجل المرضى</h2>
+            <div class="title-line"></div>
+            <p class="section-desc">أدخل رقم الهاتف أو كود الحجز لمتابعة تعليمات الطبيب، نتائج الفحوصات، وتاريخ المتابعة القادمة</p>
+
+            <div class="followup-container">
+                <div class="search-box-container" style="margin-bottom: 30px;">
+                    <input type="text" id="trackPhoneInput" placeholder="أدخل رقم الهاتف المسجل بالحجز...">
+                    <button class="btn btn-primary" onclick="trackStatus()">استعلام عن الحالة</button>
+                </div>
+
+                <div id="trackResultBox" class="track-result-box" style="display: none;">
+                    <h3><i class="fa-solid fa-notes-medical"></i> تقرير المتابعة السريرية</h3>
+                    <div class="report-content" id="reportContent">
+                        <!-- بيانات المتابعة تظهر ديناميكياً -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر الشامل -->
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-widget">
+                <h3><i class="fa-solid fa-hospital"></i> مستشفيات الشفاء</h3>
+                <p>صرح طبّي متكامل يجمع بين الرعاية الإنسانية الفائقة وأحدث تكنولوجيا العصر الحديث لخدمة المرضى والمتابعة المستمرة.</p>
+            </div>
+            <div class="footer-widget">
+                <h3>أقسام المستشفى</h3>
+                <p>قسم القلب والشرايين</p>
+                <p>قسم الجراحة العامة</p>
+                <p>قسم العظام والمفاصل</p>
+                <p>قسم الطوارئ والإسعاف</p>
+            </div>
+            <div class="footer-widget">
+                <h3>تواصل معنا والدفع</h3>
+                <p><i class="fa-solid fa-phone"></i> الخط الساخن: 12345</p>
+                <p><i class="fa-solid fa-envelope"></i> info@alshifahospital.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> شارع الصحة، القاهرة، مصر</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 - مستشفيات الشفاء التخصصي</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
